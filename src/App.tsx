@@ -56,12 +56,6 @@ const orders = [
   { id: "NX-1039", customer: "Hamza Raza", amount: 3800, status: "Completed" },
 ];
 
-const products = [
-  { name: "Premium Headphones", stock: 42, price: 12500 },
-  { name: "Smart Watch Pro", stock: 8, price: 8500 },
-  { name: "Wireless Speaker", stock: 25, price: 4200 },
-  { name: "USB-C Hub", stock: 5, price: 3800 },
-];
 
 const menu = [
   { name: "Dashboard", icon: LayoutDashboard },
