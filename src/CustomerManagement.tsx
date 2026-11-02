@@ -15,7 +15,7 @@ type Customer = {
 
 type CustomerForm = Omit<Customer, "_id">;
 
-const API = "http://localhost:3000/api/customers";
+const API = `${import.meta.env.VITE_API_URL}/api/customers`;
 
 const emptyForm: CustomerForm = {
   name: "",

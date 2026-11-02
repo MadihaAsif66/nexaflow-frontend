@@ -108,7 +108,7 @@ export default function App() {
   const [notifications, setNotifications] = useState(false);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/health")
+    fetch(`${import.meta.env.VITE_API_URL}/api/health`)
       .then((response) => {
         if (!response.ok) throw new Error("Backend offline");
         return response.json();
