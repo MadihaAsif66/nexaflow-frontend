@@ -2,7 +2,7 @@ import  CustomerManagement from "./customermanagement"
 import { useEffect, useState } from "react";
 import {
   LayoutDashboard, Users, ShoppingBag, Package,
-  BarChart3, Bell, Search, Menu, X, Zap,
+  BarChart3, Bell, Menu, X, Zap,
   ArrowUpRight, Download, Activity, ShieldCheck
 } from "lucide-react";
 import {
@@ -102,7 +102,7 @@ function Status({ value }: { value: string }) {
 
 export default function App() {
   const [page, setPage] = useState<Page>("Dashboard");
-  const [search, setSearch] = useState("");
+  const [, setSearch] = useState("");
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [backendOnline, setBackendOnline] = useState(false);
   const [notifications, setNotifications] = useState(false);
