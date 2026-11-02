@@ -1,8 +1,8 @@
-import  CustomerManagement from "./customermanagement"
-import { useEffect, useState } from "react";
-import {
-  LayoutDashboard, Users, ShoppingBag, Package,
-  BarChart3, Bell, Menu, X, Zap,
+  import  CustomerManagement from "./CustomerManagement"
+  import { useEffect, useState } from "react";
+  import {
+    LayoutDashboard, Users, ShoppingBag, Package,
+    BarChart3, Bell, Menu, X, Zap,
   ArrowUpRight, Download, Activity, ShieldCheck
 } from "lucide-react";
 import {
