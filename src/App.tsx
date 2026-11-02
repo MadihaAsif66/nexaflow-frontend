@@ -1,3 +1,5 @@
+  import OrderManagement from "./Order";
+import InventoryManagement from "./Inventory";
   import  CustomerManagement from "./CustomerManagement"
   import { useEffect, useState } from "react";
   import {
@@ -446,47 +448,9 @@ export default function App() {
           {page === "Customers" && (
             <CustomerManagement />
           )}
+        {page === "Orders" && <OrderManagement />}
 
-          {page === "Orders" && (
-            <Panel title="Order Management" subtitle="Track customer orders">
-              <div className="table-scroll">
-                <table>
-                  <thead>
-                    <tr>
-                      <th>ORDER</th>
-                      <th>CUSTOMER</th>
-                      <th>AMOUNT</th>
-                      <th>STATUS</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {orders.map((order) => (
-                      <tr key={order.id}>
-                        <td className="highlight">{order.id}</td>
-                        <td>{order.customer}</td>
-                        <td>PKR {order.amount.toLocaleString()}</td>
-                        <td><Status value={order.status} /></td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
-              </div>
-            </Panel>
-          )}
-
-          {page === "Inventory" && (
-            <div className="inventory-grid">
-              {products.map((product) => (
-                <div className="panel product" key={product.name}>
-                  <Package size={27} color="#a58aff" />
-                  <h3>{product.name}</h3>
-                  <p>PKR {product.price.toLocaleString()}</p>
-                  <Status value={product.stock < 10 ? "Low Stock" : "Active"} />
-                  <p>{product.stock} units available</p>
-                </div>
-              ))}
-            </div>
-          )}
+          {page === "Inventory" && <InventoryManagement />}
 
           <footer>© 2026 NexaFlow Studio · Premium Dashboard Demo</footer>
         </main>
